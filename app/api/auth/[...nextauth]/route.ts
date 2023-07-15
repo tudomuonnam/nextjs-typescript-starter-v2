@@ -4,6 +4,9 @@ import prisma from "@/lib/prisma";
 import { compare } from "bcrypt";
 
 export const authOptions: NextAuthOptions = {
+  session: {
+    strategy: 'jwt'
+  },
   providers: [
     CredentialsProvider({
       credentials: {
@@ -24,10 +27,41 @@ export const authOptions: NextAuthOptions = {
         if (!user || !(await compare(password, user.password))) {
           throw new Error("Invalid username or password");
         }
-        return user;
+        return {
+          id: user.id + '',
+          email: user.email,
+          password: user.password.toString(),
+        };
       },
     }),
   ],
+  callbacks: {
+    session: ({ session, token }) => {
+      console.log('Session Callback', { session, token })
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.id,
+          randomKey: token.password
+        }
+      }
+    },
+    jwt: ({ token, user }) => {
+      console.log('JWT Callback', { token, user })
+      if (user) {
+        const u = user as unknown as any
+        return {
+          ...token,
+          id: u.id,
+          randomKey: u.password,
+        }
+      }
+      return token
+    }
+  }
+
+
 };
 
 const handler = NextAuth(authOptions);

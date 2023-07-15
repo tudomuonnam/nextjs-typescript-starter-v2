@@ -9,6 +9,19 @@
 This is a <a href="https://nextjs.org/">Next.js</a> starter kit that uses <a href="https://next-auth.js.org/">Next-Auth</a> for simple email + password login<br/>
 <a href="https://www.prisma.io/">Prisma</a> as the ORM, and a <a href="https://vercel.com/postgres">Vercel Postgres</a> database to persist the data.</p>
 
+## Mô tả ứng dụng
+
+Templates deployed `Nextjs` + `Next-Auth` + `Prisma` giúp nhanh chóng buid login cho ứng dụng
+
+- Prisma: Xây dựng mô hình database giúp ứng dụng tự kết nối với database mà không cần gọi qua server backend API -> xây dựng mock nhanh hơn
+- Next-Auth: Giúp tăng quá trình code đăng nhận - phân quyền cho User. Phân vùng những nơi User có quyền hoặc không có quyền đăng nhập
+- Thời gian làm việc ở đây: 1 ngày: 15/07
+
+
+
+
+
+
 <br/>
 
 ## Deploy Your Own
