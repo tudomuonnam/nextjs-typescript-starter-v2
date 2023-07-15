@@ -17,7 +17,13 @@ Templates deployed `Nextjs` + `Next-Auth` + `Prisma` giúp nhanh chóng buid log
 - Next-Auth: Giúp tăng quá trình code đăng nhận - phân quyền cho User. Phân vùng những nơi User có quyền hoặc không có quyền đăng nhập
 - Thời gian làm việc ở đây: 1 ngày: 15/07
 
+## Nâng cấp
 
+- Check lại kết nối với database, mỗi khi khởi động lại ứng dụng, Prisma xóa user đã tạo trước đó
+- Tạo dashboard cho User
+- Kết nối với Backend REST API, giữ 2 ứng dụng độc lập lẫn nhau.
+- Buid thêm các dạng đăng nhập khác: Đăng nhập bằng github, Google, Facebook. Quan trọng nhất là lưu được thông tin user vào database và gửi mail xác nhận.
+- Thêm pipeline CI-CD để đồng bộ phát triển ứng dụng
 
 
 
