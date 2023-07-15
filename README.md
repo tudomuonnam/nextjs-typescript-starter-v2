@@ -15,7 +15,7 @@ Templates deployed `Nextjs` + `Next-Auth` + `Prisma` giúp nhanh chóng buid log
 
 - Prisma: Xây dựng mô hình database giúp ứng dụng tự kết nối với database mà không cần gọi qua server backend API -> xây dựng mock nhanh hơn
 - Next-Auth: Giúp tăng quá trình code đăng nhận - phân quyền cho User. Phân vùng những nơi User có quyền hoặc không có quyền đăng nhập
-- Thời gian làm việc ở đây: 1 ngày: 15/07
+- Thời gian làm việc ở đây: 1 ngày: 15/07/2023
 
 ## Nâng cấp
 
